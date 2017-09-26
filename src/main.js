@@ -110,7 +110,7 @@ export const punctuation = Object.freeze([
  * @type { string[] }
 */
 export const commonVowels = Object.freeze([
-  '\u05B7', //  ַ	HEBREW POINT PATAH • furtive patah is not a distinct character
+  '\u05B7', //  ַ HEBREW POINT PATAH • furtive patah is not a distinct character
   '\u05B8', //  ָ HEBREW POINT QAMATS • used generically or as qamats gadol in orthography which distinguishes that from qamats qatan → \u05C7 ׇ  hebrew point qamats qatan
   '\u05B5', // ֵ HEBREW POINT TSERE
   '\u05B4', //  ִ HEBREW POINT HIRIQ

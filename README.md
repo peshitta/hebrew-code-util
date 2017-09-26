@@ -85,8 +85,8 @@ npm run build
     * [.isDiacritic](#module_hebrew.isDiacritic) ⇒ <code>boolean</code>
     * [.isPunctuation](#module_hebrew.isPunctuation) ⇒ <code>boolean</code>
     * [.isDotting](#module_hebrew.isDotting) ⇒ <code>boolean</code>
-    * [.endify](#module_hebrew.endify) ⇒ <code>string</code>
     * [.removeDotting](#module_hebrew.removeDotting) ⇒ <code>string</code>
+    * [.endify](#module_hebrew.endify) ⇒ <code>string</code>
 
 <a name="module_hebrew.consonants"></a>
 
@@ -286,18 +286,6 @@ Returns true if c is dotting character
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="module_hebrew.endify"></a>
-
-### hebrew.endify ⇒ <code>string</code>
-Fix end consonant for a Hebrew word
-
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
-**Returns**: <code>string</code> - word with end consonant corrected  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| word | <code>string</code> | input word |
-
 <a name="module_hebrew.removeDotting"></a>
 
 ### hebrew.removeDotting ⇒ <code>string</code>
@@ -309,4 +297,16 @@ Remove dotting (vowels and diacritics), leaving consonantal word only.
 | Param | Type | Description |
 | --- | --- | --- |
 | word | <code>string</code> | input word to be processed |
+
+<a name="module_hebrew.endify"></a>
+
+### hebrew.endify ⇒ <code>string</code>
+Fix end consonant for a Hebrew word
+
+**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
+**Returns**: <code>string</code> - word with end consonant corrected  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| word | <code>string</code> | input word |
 

@@ -19,7 +19,7 @@ describe('Hebrew', () => {
     test.ok(sut.hasFinalConsonant('מ'), 'מ hasFinalConsonant');
     test.ok(sut.hasFinalConsonant('צ'), 'צ hasFinalConsonant');
 
-    test.ok(!sut.hasFinalConsonant('ל'), "! ל hasFinalConsonant");
+    test.ok(!sut.hasFinalConsonant('ל'), '! ל hasFinalConsonant');
   });
   it('Is Vowel', () => {
     test.ok(sut.isVowel('ֻ'), 'ֹֹֻ isֹVowel');
@@ -35,7 +35,6 @@ describe('Hebrew', () => {
     test.ok(sut.isRegularDiacritic('ׁ'), 'ׁ isRegularDiacritic');
     test.ok(sut.isRegularDiacritic('ׅ'), 'ׅ isRegularDiacritic');
     test.ok(sut.isRegularDiacritic('ׂ'), 'ׂ isRegularDiacritic');
-
 
     test.ok(!sut.isRegularDiacritic("'"), "! ' isRegularDiacritic");
     test.ok(!sut.isRegularDiacritic(','), '! , isRegularDiacritic');
@@ -106,7 +105,7 @@ describe('Hebrew', () => {
         expected,
         'בראשית, removeDotting'
       );
-  
+
       word = 'הָאָרֶץ דֶּשֶׁא';
       expected = 'הארץ דשא';
       test.strictEqual(
@@ -114,7 +113,7 @@ describe('Hebrew', () => {
         expected,
         'הָאָרֶץ דֶּשֶׁא removeDotting'
       );
-  
+
       word = 'וַיְהִי-עֶרֶב';
       expected = 'ויהי-ערב';
       test.strictEqual(
@@ -122,7 +121,7 @@ describe('Hebrew', () => {
         expected,
         'וַיְהִי-עֶרֶב removeDotting'
       );
-  
+
       test.strictEqual(sut.removeDotting("'"), "'", "' removeDotting");
       test.strictEqual(sut.removeDotting(','), ',', ', removeDotting');
       test.strictEqual(sut.removeDotting('*'), '*', '* removeDotting');
@@ -130,8 +129,7 @@ describe('Hebrew', () => {
       test.strictEqual(sut.removeDotting(''), '', "'' removeDotting");
       test.strictEqual(sut.removeDotting(' '), ' ', "' ' removeDotting");
     });
-      
-  })
+  });
   describe('Endify', () => {
     it('Standalone non-vocalized return non-final', () => {
       test.strictEqual(sut.endify('נ'), 'נ', 'נ endify');
@@ -143,8 +141,16 @@ describe('Hebrew', () => {
     });
     // ------------------------------------------------------
     it('Non-standalone vocalized final', () => {
-      test.strictEqual(sut.endify('הַחֹשֶׁךְ'), 'הַחֹשֶׁךְ', 'הַחֹשֶׁךְ endify');
-      test.strictEqual(sut.endify('הַחֹשֶׁכְ'), 'הַחֹשֶׁךְ', 'הַחֹשֶׁכְ endify');
+      test.strictEqual(
+        sut.endify('הַחֹשֶׁךְ'),
+        'הַחֹשֶׁךְ',
+        'הַחֹשֶׁךְ endify'
+      );
+      test.strictEqual(
+        sut.endify('הַחֹשֶׁכְ'),
+        'הַחֹשֶׁךְ',
+        'הַחֹשֶׁכְ endify'
+      );
     });
     it('Non-standalone vocalized final other', () => {
       test.strictEqual(sut.endify('הַיּוֹם'), 'הַיּוֹם', 'הַיּוֹם endify');
@@ -156,6 +162,5 @@ describe('Hebrew', () => {
       test.strictEqual(sut.endify(0), 0, '0 endify');
       test.strictEqual(sut.endify(null), null, 'null endify');
     });
-
   });
 });
