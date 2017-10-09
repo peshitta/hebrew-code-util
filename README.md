@@ -25,7 +25,7 @@ Following bundles are available:
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/hebrew-code-util/-/hebrew-code-util-1.0.0.tgz](https://registry.npmjs.org/hebrew-code-util/-/hebrew-code-util-1.0.0.tgz)
+[https://registry.npmjs.org/hebrew-code-util/-/hebrew-code-util-1.0.1.tgz](https://registry.npmjs.org/hebrew-code-util/-/hebrew-code-util-1.0.1.tgz)
 
 ## More information
 
@@ -60,250 +60,250 @@ npm run build
 
 ## API Reference
 
-* [hebrew](#module_hebrew)
-    * [.consonants](#module_hebrew.consonants) : <code>Array.&lt;string&gt;</code>
-    * [.finalConsonants](#module_hebrew.finalConsonants) : <code>Array.&lt;string&gt;</code>
-    * [.withFinalConsonants](#module_hebrew.withFinalConsonants) : <code>Array.&lt;string&gt;</code>
-    * [.toFinalConsonantMap](#module_hebrew.toFinalConsonantMap) : <code>Object.&lt;string, string&gt;</code>
-    * [.yiddishDigraphs](#module_hebrew.yiddishDigraphs) : <code>Array.&lt;string&gt;</code>
-    * [.allConsonants](#module_hebrew.allConsonants) : <code>Array.&lt;string&gt;</code>
-    * [.punctuation](#module_hebrew.punctuation) : <code>Array.&lt;string&gt;</code>
-    * [.commonVowels](#module_hebrew.commonVowels) : <code>Array.&lt;string&gt;</code>
-    * [.easternCommonVowels](#module_hebrew.easternCommonVowels) : <code>Array.&lt;string&gt;</code>
-    * [.otherVowels](#module_hebrew.otherVowels) : <code>Array.&lt;string&gt;</code>
-    * [.allVowels](#module_hebrew.allVowels) : <code>Array.&lt;string&gt;</code>
-    * [.diacritics](#module_hebrew.diacritics) : <code>Array.&lt;string&gt;</code>
-    * [.cantillationDiacritics](#module_hebrew.cantillationDiacritics) : <code>Array.&lt;string&gt;</code>
-    * [.allDiacritics](#module_hebrew.allDiacritics) : <code>Array.&lt;string&gt;</code>
-    * [.dotting](#module_hebrew.dotting) : <code>Array.&lt;string&gt;</code>
-    * [.isConsonant](#module_hebrew.isConsonant) ⇒ <code>boolean</code>
-    * [.isFinalConsonant](#module_hebrew.isFinalConsonant) ⇒ <code>boolean</code>
-    * [.hasFinalConsonant](#module_hebrew.hasFinalConsonant) ⇒ <code>boolean</code>
-    * [.isVowel](#module_hebrew.isVowel) ⇒ <code>boolean</code>
-    * [.isRegularDiacritic](#module_hebrew.isRegularDiacritic) ⇒ <code>boolean</code>
-    * [.isCantillationDiacritic](#module_hebrew.isCantillationDiacritic) ⇒ <code>boolean</code>
-    * [.isDiacritic](#module_hebrew.isDiacritic) ⇒ <code>boolean</code>
-    * [.isPunctuation](#module_hebrew.isPunctuation) ⇒ <code>boolean</code>
-    * [.isDotting](#module_hebrew.isDotting) ⇒ <code>boolean</code>
-    * [.removeDotting](#module_hebrew.removeDotting) ⇒ <code>string</code>
-    * [.endify](#module_hebrew.endify) ⇒ <code>string</code>
+* [hebrewCodeUtil](#module_hebrewCodeUtil)
+    * [.consonants](#module_hebrewCodeUtil.consonants) : <code>Array.&lt;string&gt;</code>
+    * [.finalConsonants](#module_hebrewCodeUtil.finalConsonants) : <code>Array.&lt;string&gt;</code>
+    * [.withFinalConsonants](#module_hebrewCodeUtil.withFinalConsonants) : <code>Array.&lt;string&gt;</code>
+    * [.toFinalConsonantMap](#module_hebrewCodeUtil.toFinalConsonantMap) : <code>Object.&lt;string, string&gt;</code>
+    * [.yiddishDigraphs](#module_hebrewCodeUtil.yiddishDigraphs) : <code>Array.&lt;string&gt;</code>
+    * [.allConsonants](#module_hebrewCodeUtil.allConsonants) : <code>Array.&lt;string&gt;</code>
+    * [.punctuation](#module_hebrewCodeUtil.punctuation) : <code>Array.&lt;string&gt;</code>
+    * [.commonVowels](#module_hebrewCodeUtil.commonVowels) : <code>Array.&lt;string&gt;</code>
+    * [.easternCommonVowels](#module_hebrewCodeUtil.easternCommonVowels) : <code>Array.&lt;string&gt;</code>
+    * [.otherVowels](#module_hebrewCodeUtil.otherVowels) : <code>Array.&lt;string&gt;</code>
+    * [.allVowels](#module_hebrewCodeUtil.allVowels) : <code>Array.&lt;string&gt;</code>
+    * [.diacritics](#module_hebrewCodeUtil.diacritics) : <code>Array.&lt;string&gt;</code>
+    * [.cantillationDiacritics](#module_hebrewCodeUtil.cantillationDiacritics) : <code>Array.&lt;string&gt;</code>
+    * [.allDiacritics](#module_hebrewCodeUtil.allDiacritics) : <code>Array.&lt;string&gt;</code>
+    * [.dotting](#module_hebrewCodeUtil.dotting) : <code>Array.&lt;string&gt;</code>
+    * [.isConsonant](#module_hebrewCodeUtil.isConsonant) ⇒ <code>boolean</code>
+    * [.isFinalConsonant](#module_hebrewCodeUtil.isFinalConsonant) ⇒ <code>boolean</code>
+    * [.hasFinalConsonant](#module_hebrewCodeUtil.hasFinalConsonant) ⇒ <code>boolean</code>
+    * [.isVowel](#module_hebrewCodeUtil.isVowel) ⇒ <code>boolean</code>
+    * [.isRegularDiacritic](#module_hebrewCodeUtil.isRegularDiacritic) ⇒ <code>boolean</code>
+    * [.isCantillationDiacritic](#module_hebrewCodeUtil.isCantillationDiacritic) ⇒ <code>boolean</code>
+    * [.isDiacritic](#module_hebrewCodeUtil.isDiacritic) ⇒ <code>boolean</code>
+    * [.isPunctuation](#module_hebrewCodeUtil.isPunctuation) ⇒ <code>boolean</code>
+    * [.isDotting](#module_hebrewCodeUtil.isDotting) ⇒ <code>boolean</code>
+    * [.removeDotting](#module_hebrewCodeUtil.removeDotting) ⇒ <code>string</code>
+    * [.endify](#module_hebrewCodeUtil.endify) ⇒ <code>string</code>
 
-<a name="module_hebrew.consonants"></a>
+<a name="module_hebrewCodeUtil.consonants"></a>
 
-### hebrew.consonants : <code>Array.&lt;string&gt;</code>
+### hebrewCodeUtil.consonants : <code>Array.&lt;string&gt;</code>
 Hebrew base 22 consonants
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
-<a name="module_hebrew.finalConsonants"></a>
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
+<a name="module_hebrewCodeUtil.finalConsonants"></a>
 
-### hebrew.finalConsonants : <code>Array.&lt;string&gt;</code>
+### hebrewCodeUtil.finalConsonants : <code>Array.&lt;string&gt;</code>
 Hebrew 5 final consonants
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
-<a name="module_hebrew.withFinalConsonants"></a>
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
+<a name="module_hebrewCodeUtil.withFinalConsonants"></a>
 
-### hebrew.withFinalConsonants : <code>Array.&lt;string&gt;</code>
+### hebrewCodeUtil.withFinalConsonants : <code>Array.&lt;string&gt;</code>
 Hebrew 5 with final pair consonants
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
-<a name="module_hebrew.toFinalConsonantMap"></a>
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
+<a name="module_hebrewCodeUtil.toFinalConsonantMap"></a>
 
-### hebrew.toFinalConsonantMap : <code>Object.&lt;string, string&gt;</code>
+### hebrewCodeUtil.toFinalConsonantMap : <code>Object.&lt;string, string&gt;</code>
 Map from regular to final consonant
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
-<a name="module_hebrew.yiddishDigraphs"></a>
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
+<a name="module_hebrewCodeUtil.yiddishDigraphs"></a>
 
-### hebrew.yiddishDigraphs : <code>Array.&lt;string&gt;</code>
+### hebrewCodeUtil.yiddishDigraphs : <code>Array.&lt;string&gt;</code>
 Yiddish digraphs
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
-<a name="module_hebrew.allConsonants"></a>
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
+<a name="module_hebrewCodeUtil.allConsonants"></a>
 
-### hebrew.allConsonants : <code>Array.&lt;string&gt;</code>
+### hebrewCodeUtil.allConsonants : <code>Array.&lt;string&gt;</code>
 All Hebrew consonants including final ones and yiddish digraphs
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
-<a name="module_hebrew.punctuation"></a>
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
+<a name="module_hebrewCodeUtil.punctuation"></a>
 
-### hebrew.punctuation : <code>Array.&lt;string&gt;</code>
+### hebrewCodeUtil.punctuation : <code>Array.&lt;string&gt;</code>
 Hebrew punctuation
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
-<a name="module_hebrew.commonVowels"></a>
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
+<a name="module_hebrewCodeUtil.commonVowels"></a>
 
-### hebrew.commonVowels : <code>Array.&lt;string&gt;</code>
+### hebrewCodeUtil.commonVowels : <code>Array.&lt;string&gt;</code>
 Hebrew common vowels - common in relation to Syriac
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
-<a name="module_hebrew.easternCommonVowels"></a>
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
+<a name="module_hebrewCodeUtil.easternCommonVowels"></a>
 
-### hebrew.easternCommonVowels : <code>Array.&lt;string&gt;</code>
+### hebrewCodeUtil.easternCommonVowels : <code>Array.&lt;string&gt;</code>
 Hebrew vowels common to eastern syriac
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
-<a name="module_hebrew.otherVowels"></a>
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
+<a name="module_hebrewCodeUtil.otherVowels"></a>
 
-### hebrew.otherVowels : <code>Array.&lt;string&gt;</code>
+### hebrewCodeUtil.otherVowels : <code>Array.&lt;string&gt;</code>
 Rest of Hebrew vowels
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
-<a name="module_hebrew.allVowels"></a>
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
+<a name="module_hebrewCodeUtil.allVowels"></a>
 
-### hebrew.allVowels : <code>Array.&lt;string&gt;</code>
+### hebrewCodeUtil.allVowels : <code>Array.&lt;string&gt;</code>
 All Hebrew vowels
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
-<a name="module_hebrew.diacritics"></a>
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
+<a name="module_hebrewCodeUtil.diacritics"></a>
 
-### hebrew.diacritics : <code>Array.&lt;string&gt;</code>
+### hebrewCodeUtil.diacritics : <code>Array.&lt;string&gt;</code>
 Hebrew regular diacritics
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
-<a name="module_hebrew.cantillationDiacritics"></a>
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
+<a name="module_hebrewCodeUtil.cantillationDiacritics"></a>
 
-### hebrew.cantillationDiacritics : <code>Array.&lt;string&gt;</code>
+### hebrewCodeUtil.cantillationDiacritics : <code>Array.&lt;string&gt;</code>
 Hebrew cantillation marks
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
-<a name="module_hebrew.allDiacritics"></a>
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
+<a name="module_hebrewCodeUtil.allDiacritics"></a>
 
-### hebrew.allDiacritics : <code>Array.&lt;string&gt;</code>
+### hebrewCodeUtil.allDiacritics : <code>Array.&lt;string&gt;</code>
 All hebrew diacritics
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
-<a name="module_hebrew.dotting"></a>
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
+<a name="module_hebrewCodeUtil.dotting"></a>
 
-### hebrew.dotting : <code>Array.&lt;string&gt;</code>
+### hebrewCodeUtil.dotting : <code>Array.&lt;string&gt;</code>
 Vowels and diacritics: used for consonantal only mapping
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
-<a name="module_hebrew.isConsonant"></a>
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
+<a name="module_hebrewCodeUtil.isConsonant"></a>
 
-### hebrew.isConsonant ⇒ <code>boolean</code>
+### hebrewCodeUtil.isConsonant ⇒ <code>boolean</code>
 Is character c a Hebrew consonant? All consonants and diagraphs are included.
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
 **Returns**: <code>boolean</code> - true if c is Hebrew consonant  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="module_hebrew.isFinalConsonant"></a>
+<a name="module_hebrewCodeUtil.isFinalConsonant"></a>
 
-### hebrew.isFinalConsonant ⇒ <code>boolean</code>
+### hebrewCodeUtil.isFinalConsonant ⇒ <code>boolean</code>
 Is character c one of the 5 Hebrew final consonant?
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
 **Returns**: <code>boolean</code> - true if c is Hebrew final consonant  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="module_hebrew.hasFinalConsonant"></a>
+<a name="module_hebrewCodeUtil.hasFinalConsonant"></a>
 
-### hebrew.hasFinalConsonant ⇒ <code>boolean</code>
+### hebrewCodeUtil.hasFinalConsonant ⇒ <code>boolean</code>
 Is character c one of the 5 Hebrew consonant that have final pairs?
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
 **Returns**: <code>boolean</code> - true if c is Hebrew consonant with final pair  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="module_hebrew.isVowel"></a>
+<a name="module_hebrewCodeUtil.isVowel"></a>
 
-### hebrew.isVowel ⇒ <code>boolean</code>
+### hebrewCodeUtil.isVowel ⇒ <code>boolean</code>
 Is character c a vowel? Shuruq may stand as diagraph too - context needed for that.
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
 **Returns**: <code>boolean</code> - true if c is a vowel  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="module_hebrew.isRegularDiacritic"></a>
+<a name="module_hebrewCodeUtil.isRegularDiacritic"></a>
 
-### hebrew.isRegularDiacritic ⇒ <code>boolean</code>
+### hebrewCodeUtil.isRegularDiacritic ⇒ <code>boolean</code>
 Is character c a regular diacritic?
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
 **Returns**: <code>boolean</code> - true if c is a regular diacritic  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="module_hebrew.isCantillationDiacritic"></a>
+<a name="module_hebrewCodeUtil.isCantillationDiacritic"></a>
 
-### hebrew.isCantillationDiacritic ⇒ <code>boolean</code>
+### hebrewCodeUtil.isCantillationDiacritic ⇒ <code>boolean</code>
 Is character c a cantillation diacritic?
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
 **Returns**: <code>boolean</code> - true if c is a cantillation diacritic  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="module_hebrew.isDiacritic"></a>
+<a name="module_hebrewCodeUtil.isDiacritic"></a>
 
-### hebrew.isDiacritic ⇒ <code>boolean</code>
+### hebrewCodeUtil.isDiacritic ⇒ <code>boolean</code>
 Is character c a diacritic.
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
 **Returns**: <code>boolean</code> - true if c is a diacritic  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="module_hebrew.isPunctuation"></a>
+<a name="module_hebrewCodeUtil.isPunctuation"></a>
 
-### hebrew.isPunctuation ⇒ <code>boolean</code>
+### hebrewCodeUtil.isPunctuation ⇒ <code>boolean</code>
 Is character c a punctuation character.
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
 **Returns**: <code>boolean</code> - true if c is punctuation  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="module_hebrew.isDotting"></a>
+<a name="module_hebrewCodeUtil.isDotting"></a>
 
-### hebrew.isDotting ⇒ <code>boolean</code>
+### hebrewCodeUtil.isDotting ⇒ <code>boolean</code>
 Returns true if c is dotting character
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
 **Returns**: <code>boolean</code> - true if c is dotting  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
 
-<a name="module_hebrew.removeDotting"></a>
+<a name="module_hebrewCodeUtil.removeDotting"></a>
 
-### hebrew.removeDotting ⇒ <code>string</code>
+### hebrewCodeUtil.removeDotting ⇒ <code>string</code>
 Remove dotting (vowels and diacritics), leaving consonantal word only.
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
 **Returns**: <code>string</code> - consonantal word  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | word | <code>string</code> | input word to be processed |
 
-<a name="module_hebrew.endify"></a>
+<a name="module_hebrewCodeUtil.endify"></a>
 
-### hebrew.endify ⇒ <code>string</code>
+### hebrewCodeUtil.endify ⇒ <code>string</code>
 Fix end consonant for a Hebrew word
 
-**Kind**: static constant of [<code>hebrew</code>](#module_hebrew)  
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
 **Returns**: <code>string</code> - word with end consonant corrected  
 
 | Param | Type | Description |

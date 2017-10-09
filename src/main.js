@@ -1,5 +1,4 @@
-/** @module hebrew */
-
+/** @module hebrewCodeUtil */
 /**
  * Hebrew base 22 consonants
  * @constant
