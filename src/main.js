@@ -111,7 +111,7 @@ export const punctuation = Object.freeze([
 export const commonVowels = Object.freeze([
   '\u05B7', //  ַ HEBREW POINT PATAH • furtive patah is not a distinct character
   '\u05B8', //  ָ HEBREW POINT QAMATS • used generically or as qamats gadol in orthography which distinguishes that from qamats qatan → \u05C7 ׇ  hebrew point qamats qatan
-  '\u05B5', // ֵ HEBREW POINT TSERE
+  '\u05B5', //  ֵ HEBREW POINT TSERE
   '\u05B4', //  ִ HEBREW POINT HIRIQ
   '\u05BC' //  ּ HEBREW POINT DAGESH OR MAPIQ = shuruq • falls within the base letter - functions as diacritic as well
 ]);
@@ -123,7 +123,7 @@ export const commonVowels = Object.freeze([
 */
 export const easternCommonVowels = Object.freeze([
   '\u05B6', //  ֶ HEBREW POINT SEGOL
-  '\u05BA' //  ֺ HEBREW POINT HOLAM HASER FOR VAV
+  '\u05BA' //  ֺHEBREW POINT HOLAM HASER FOR VAV
 ]);
 
 /**
@@ -158,8 +158,8 @@ export const allVowels = commonVowels
 export const diacritics = Object.freeze([
   '\u05BD', //  ֽ HEBREW POINT METEG  = siluq  • may be used as a Hebrew accent sof pasuq
   '\u05BF', //  ֿ HEBREW POINT RAFE  → \uFB1E ﬞ  hebrew point judeo-spanish varika
-  '\u05C1', // ׁ HEBREW POINT SHIN DOT
-  '\u05C2', //  ׂ HEBREW POINT SIN DOT
+  '\u05C1', //  ׁHEBREW POINT SHIN DOT
+  '\u05C2', //  ׂHEBREW POINT SIN DOT
   '\u05C4', //  ׄ HEBREW MARK UPPER DOT
   '\u05C5' //  ׅ HEBREW MARK LOWER DOT • punctum extraordinarium (Psalms 27:13) → \u05B4 hebrew point hiriq
 ]);
@@ -178,7 +178,7 @@ export const cantillationDiacritics = Object.freeze([
   '\u0596', //  ֖ HEBREW ACCENT TIPEHA = tarha, me'ayla ~ mayla
   '\u0597', //  ֗ HEBREW ACCENT REVIA
   '\u0598', //  ֘ HEBREW ACCENT ZARQA = tsinorit, zinorit; tsinor, zinor • This character is to be used when Zarqa or Tsinor are placed above, and also for Tsinorit. → \u05AE hebrew accent zinor
-  '\u0599', // HEBREW ACCENT PASHTA
+  '\u0599', //  ֙ HEBREW ACCENT PASHTA
   '\u059A', // $֚ HEBREW ACCENT YETIV
   '\u059B', //  ֛ HEBREW ACCENT TEVIR
   '\u059C', //  ֜ HEBREW ACCENT GERESH = teres
