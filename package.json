@@ -1,6 +1,6 @@
 {
   "name": "hebrew-code-util",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Hebrew unicode utilities",
   "main": "build/hebrew-code-util.js",
   "mainMin": "build/hebrew-code-util.min.js",

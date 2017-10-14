@@ -299,6 +299,24 @@ export const isPunctuation = c => punctuation.indexOf(c) > -1;
 export const isDotting = c => dotting.indexOf(c) > -1;
 
 /**
+ * Return true if input word has vowels or diacritics
+ * @param { string } word input CAL code word
+ * @returns { boolean } true if word has vowels or diacritics
+ */
+export const isDotted = word => {
+  if (!word) {
+    return false;
+  }
+  for (let i = 0, len = word.length; i < len; i++) {
+    const c = word.charAt(i);
+    if (isDotting(c)) {
+      return true;
+    }
+  }
+  return false;
+};
+
+/**
  * Returns true if c is begadkepat character
  * @param { string } c input character
  * @returns { boolean } true if c is begadkepat

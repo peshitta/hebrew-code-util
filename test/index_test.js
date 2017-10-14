@@ -175,3 +175,14 @@ describe('Hebrew', () => {
     });
   });
 });
+describe('isDotted', () => {
+  const { isDotted } = sut;
+  it('Consonantal and vocalised isDotted', () => {
+    const empty = isDotted('');
+    const consonant = isDotted('דקסריא-דפיליפוס');
+    const vocalised = isDotted('דּקֵסַרִיַא-דפיִליִפּוֺס');
+    test.strictEqual(empty, false, 'isDotted empty');
+    test.strictEqual(consonant, false, 'isDotted consonant only');
+    test.strictEqual(vocalised, true, 'isDotted vocalised');
+  });
+});

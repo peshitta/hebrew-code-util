@@ -25,7 +25,7 @@ Following bundles are available:
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/hebrew-code-util/-/hebrew-code-util-1.0.2.tgz](https://registry.npmjs.org/hebrew-code-util/-/hebrew-code-util-1.0.2.tgz)
+[https://registry.npmjs.org/hebrew-code-util/-/hebrew-code-util-1.0.3.tgz](https://registry.npmjs.org/hebrew-code-util/-/hebrew-code-util-1.0.3.tgz)
 
 ## More information
 
@@ -86,6 +86,7 @@ npm run build
     * [.isDiacritic](#module_hebrewCodeUtil.isDiacritic) ⇒ <code>boolean</code>
     * [.isPunctuation](#module_hebrewCodeUtil.isPunctuation) ⇒ <code>boolean</code>
     * [.isDotting](#module_hebrewCodeUtil.isDotting) ⇒ <code>boolean</code>
+    * [.isDotted](#module_hebrewCodeUtil.isDotted) ⇒ <code>boolean</code>
     * [.isBegadkepat](#module_hebrewCodeUtil.isBegadkepat) ⇒ <code>boolean</code>
     * [.removeDotting](#module_hebrewCodeUtil.removeDotting) ⇒ <code>string</code>
     * [.endify](#module_hebrewCodeUtil.endify) ⇒ <code>string</code>
@@ -293,6 +294,18 @@ Returns true if c is dotting character
 | Param | Type | Description |
 | --- | --- | --- |
 | c | <code>string</code> | input character |
+
+<a name="module_hebrewCodeUtil.isDotted"></a>
+
+### hebrewCodeUtil.isDotted ⇒ <code>boolean</code>
+Return true if input word has vowels or diacritics
+
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
+**Returns**: <code>boolean</code> - true if word has vowels or diacritics  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| word | <code>string</code> | input CAL code word |
 
 <a name="module_hebrewCodeUtil.isBegadkepat"></a>
 
