@@ -25,7 +25,7 @@ Following bundles are available:
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/hebrew-code-util/-/hebrew-code-util-1.0.1.tgz](https://registry.npmjs.org/hebrew-code-util/-/hebrew-code-util-1.0.1.tgz)
+[https://registry.npmjs.org/hebrew-code-util/-/hebrew-code-util-1.0.2.tgz](https://registry.npmjs.org/hebrew-code-util/-/hebrew-code-util-1.0.2.tgz)
 
 ## More information
 
@@ -65,6 +65,7 @@ npm run build
     * [.finalConsonants](#module_hebrewCodeUtil.finalConsonants) : <code>Array.&lt;string&gt;</code>
     * [.withFinalConsonants](#module_hebrewCodeUtil.withFinalConsonants) : <code>Array.&lt;string&gt;</code>
     * [.toFinalConsonantMap](#module_hebrewCodeUtil.toFinalConsonantMap) : <code>Object.&lt;string, string&gt;</code>
+    * [.begadkepat](#module_hebrewCodeUtil.begadkepat) : <code>Array.&lt;string&gt;</code>
     * [.yiddishDigraphs](#module_hebrewCodeUtil.yiddishDigraphs) : <code>Array.&lt;string&gt;</code>
     * [.allConsonants](#module_hebrewCodeUtil.allConsonants) : <code>Array.&lt;string&gt;</code>
     * [.punctuation](#module_hebrewCodeUtil.punctuation) : <code>Array.&lt;string&gt;</code>
@@ -85,6 +86,7 @@ npm run build
     * [.isDiacritic](#module_hebrewCodeUtil.isDiacritic) ⇒ <code>boolean</code>
     * [.isPunctuation](#module_hebrewCodeUtil.isPunctuation) ⇒ <code>boolean</code>
     * [.isDotting](#module_hebrewCodeUtil.isDotting) ⇒ <code>boolean</code>
+    * [.isBegadkepat](#module_hebrewCodeUtil.isBegadkepat) ⇒ <code>boolean</code>
     * [.removeDotting](#module_hebrewCodeUtil.removeDotting) ⇒ <code>string</code>
     * [.endify](#module_hebrewCodeUtil.endify) ⇒ <code>string</code>
 
@@ -110,6 +112,12 @@ Hebrew 5 with final pair consonants
 
 ### hebrewCodeUtil.toFinalConsonantMap : <code>Object.&lt;string, string&gt;</code>
 Map from regular to final consonant
+
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
+<a name="module_hebrewCodeUtil.begadkepat"></a>
+
+### hebrewCodeUtil.begadkepat : <code>Array.&lt;string&gt;</code>
+Begadkepat letters
 
 **Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
 <a name="module_hebrewCodeUtil.yiddishDigraphs"></a>
@@ -281,6 +289,18 @@ Returns true if c is dotting character
 
 **Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
 **Returns**: <code>boolean</code> - true if c is dotting  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| c | <code>string</code> | input character |
+
+<a name="module_hebrewCodeUtil.isBegadkepat"></a>
+
+### hebrewCodeUtil.isBegadkepat ⇒ <code>boolean</code>
+Returns true if c is begadkepat character
+
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
+**Returns**: <code>boolean</code> - true if c is begadkepat  
 
 | Param | Type | Description |
 | --- | --- | --- |

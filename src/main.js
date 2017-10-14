@@ -69,6 +69,23 @@ export const toFinalConsonantMap = Object.freeze(
     צ: { value: '\u05E5', enumerable: true } // צ HEBREW LETTER TSADI = zade
   })
 );
+
+/**
+ * Begadkepat letters
+ * @constant
+ * @type { string[] }
+*/
+export const begadkepat = Object.freeze([
+  '\u05D1', // ב HEBREW LETTER BET  → \u2136 ℶ bet symbol
+  '\u05D2', // ג HEBREW LETTER GIMEL  → \u2137 ℷ gimel symbol
+  '\u05D3', // ד HEBREW LETTER DALET  → \u2138 ℸ dalet symbol
+  '\u05DA', // ך HEBREW LETTER FINAL KAF
+  '\u05DB', // כ HEBREW LETTER KAF
+  '\u05E3', // ף HEBREW LETTER FINAL PE
+  '\u05E4', // פ HEBREW LETTER PE
+  '\u05EA' // ת HEBREW LETTER TAV
+]);
+
 /**
  * Yiddish digraphs
  * @constant
@@ -280,6 +297,13 @@ export const isPunctuation = c => punctuation.indexOf(c) > -1;
  * @returns { boolean } true if c is dotting
  */
 export const isDotting = c => dotting.indexOf(c) > -1;
+
+/**
+ * Returns true if c is begadkepat character
+ * @param { string } c input character
+ * @returns { boolean } true if c is begadkepat
+ */
+export const isBegadkepat = c => begadkepat.indexOf(c) > -1;
 
 /**
  * Remove dotting (vowels and diacritics), leaving consonantal word only.

@@ -15,6 +15,17 @@ describe('Hebrew', () => {
     test.ok(!sut.isFinalConsonant('ד'), '! ד isFinalConsonant');
     test.ok(!sut.isFinalConsonant('ו'), "! 'ו' isFinalConsonant");
   });
+  it('Is Begadkepat', () => {
+    test.ok(sut.isBegadkepat('\u05D1'), 'ֹֹֻ isBegadkepat');
+    test.ok(sut.isBegadkepat('\u05DA'), 'ֶ isBegadkepat');
+    test.ok(sut.isBegadkepat('\u05E3'), 'ִ isBegadkepat');
+    test.ok(sut.isBegadkepat('\u05D2'), 'ִ isBegadkepat');
+    test.ok(sut.isBegadkepat('\u05EA'), 'ִ isBegadkepat');
+
+    test.ok(!sut.isBegadkepat('U'), 'U isBegadkepat');
+    test.ok(!sut.isBegadkepat(':'), ': isBegadkepat');
+    test.ok(!sut.isBegadkepat(''), "! '' isBegadkepat");
+  });
   it('Is Western Vowel', () => {
     test.ok(sut.hasFinalConsonant('מ'), 'מ hasFinalConsonant');
     test.ok(sut.hasFinalConsonant('צ'), 'צ hasFinalConsonant');
