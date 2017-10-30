@@ -25,7 +25,7 @@ Following bundles are available:
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/hebrew-code-util/-/hebrew-code-util-1.0.3.tgz](https://registry.npmjs.org/hebrew-code-util/-/hebrew-code-util-1.0.3.tgz)
+[https://registry.npmjs.org/hebrew-code-util/-/hebrew-code-util-1.0.4.tgz](https://registry.npmjs.org/hebrew-code-util/-/hebrew-code-util-1.0.4.tgz)
 
 ## More information
 
@@ -61,6 +61,7 @@ npm run build
 ## API Reference
 
 * [hebrewCodeUtil](#module_hebrewCodeUtil)
+    * [.consonantsByName](#module_hebrewCodeUtil.consonantsByName) : <code>Object.&lt;string, string&gt;</code>
     * [.consonants](#module_hebrewCodeUtil.consonants) : <code>Array.&lt;string&gt;</code>
     * [.finalConsonants](#module_hebrewCodeUtil.finalConsonants) : <code>Array.&lt;string&gt;</code>
     * [.withFinalConsonants](#module_hebrewCodeUtil.withFinalConsonants) : <code>Array.&lt;string&gt;</code>
@@ -69,10 +70,12 @@ npm run build
     * [.yiddishDigraphs](#module_hebrewCodeUtil.yiddishDigraphs) : <code>Array.&lt;string&gt;</code>
     * [.allConsonants](#module_hebrewCodeUtil.allConsonants) : <code>Array.&lt;string&gt;</code>
     * [.punctuation](#module_hebrewCodeUtil.punctuation) : <code>Array.&lt;string&gt;</code>
+    * [.vowelsByName](#module_hebrewCodeUtil.vowelsByName) : <code>Object.&lt;string, string&gt;</code>
     * [.commonVowels](#module_hebrewCodeUtil.commonVowels) : <code>Array.&lt;string&gt;</code>
     * [.easternCommonVowels](#module_hebrewCodeUtil.easternCommonVowels) : <code>Array.&lt;string&gt;</code>
     * [.otherVowels](#module_hebrewCodeUtil.otherVowels) : <code>Array.&lt;string&gt;</code>
     * [.allVowels](#module_hebrewCodeUtil.allVowels) : <code>Array.&lt;string&gt;</code>
+    * [.diacriticsByName](#module_hebrewCodeUtil.diacriticsByName) : <code>Array.&lt;string&gt;</code>
     * [.diacritics](#module_hebrewCodeUtil.diacritics) : <code>Array.&lt;string&gt;</code>
     * [.cantillationDiacritics](#module_hebrewCodeUtil.cantillationDiacritics) : <code>Array.&lt;string&gt;</code>
     * [.allDiacritics](#module_hebrewCodeUtil.allDiacritics) : <code>Array.&lt;string&gt;</code>
@@ -91,6 +94,12 @@ npm run build
     * [.removeDotting](#module_hebrewCodeUtil.removeDotting) ⇒ <code>string</code>
     * [.endify](#module_hebrewCodeUtil.endify) ⇒ <code>string</code>
 
+<a name="module_hebrewCodeUtil.consonantsByName"></a>
+
+### hebrewCodeUtil.consonantsByName : <code>Object.&lt;string, string&gt;</code>
+Hebrew consonant name to value map
+
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
 <a name="module_hebrewCodeUtil.consonants"></a>
 
 ### hebrewCodeUtil.consonants : <code>Array.&lt;string&gt;</code>
@@ -139,6 +148,12 @@ All Hebrew consonants including final ones and yiddish digraphs
 Hebrew punctuation
 
 **Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
+<a name="module_hebrewCodeUtil.vowelsByName"></a>
+
+### hebrewCodeUtil.vowelsByName : <code>Object.&lt;string, string&gt;</code>
+Hebrew vowel name to value map
+
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
 <a name="module_hebrewCodeUtil.commonVowels"></a>
 
 ### hebrewCodeUtil.commonVowels : <code>Array.&lt;string&gt;</code>
@@ -161,6 +176,12 @@ Rest of Hebrew vowels
 
 ### hebrewCodeUtil.allVowels : <code>Array.&lt;string&gt;</code>
 All Hebrew vowels
+
+**Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
+<a name="module_hebrewCodeUtil.diacriticsByName"></a>
+
+### hebrewCodeUtil.diacriticsByName : <code>Array.&lt;string&gt;</code>
+Hebrew regular diacritics name/value map
 
 **Kind**: static constant of [<code>hebrewCodeUtil</code>](#module_hebrewCodeUtil)  
 <a name="module_hebrewCodeUtil.diacritics"></a>

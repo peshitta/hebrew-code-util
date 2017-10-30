@@ -1,6 +1,6 @@
 {
   "name": "hebrew-code-util",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Hebrew unicode utilities",
   "main": "build/hebrew-code-util.js",
   "mainMin": "build/hebrew-code-util.min.js",
@@ -26,7 +26,8 @@
       "no-nested-ternary": 0,
       "function-paren-newline": 0,
       "import/extensions": 0,
-      "arrow-parens": 0
+      "arrow-parens": 0,
+      "max-len": 0
     }
   },
   "files": [
@@ -40,6 +41,7 @@
     "url": "git+https://github.com/peshitta/hebrew-code-util.git"
   },
   "keywords": [
+    "Hebrew",
     "Peshitta",
     "Peshitto",
     "Pshitta",
@@ -59,12 +61,14 @@
     "url": "https://github.com/peshitta/hebrew-code-util/issues"
   },
   "homepage": "https://github.com/peshitta/hebrew-code-util#readme",
-  "dependencies": {},
+  "dependencies": {
+    "aramaic-mapper": "^1.1.3"
+  },
   "devDependencies": {
     "coveralls": "^3.0.0",
-    "eslint": "^4.8.0",
-    "eslint-config-airbnb-base": "^12.0.2",
-    "eslint-plugin-import": "^2.7.0",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
     "istanbul": "^0.4.5",
     "jsdoc-to-markdown": "^3.0.0",
     "mocha": "^4.0.1",
