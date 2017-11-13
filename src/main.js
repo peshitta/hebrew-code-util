@@ -1,5 +1,5 @@
 /** @module hebrewCodeUtil */
-import { hasDotting, clearDotting } from 'aramaic-mapper';
+import { hasDotting, clearDotting, getSort } from 'aramaic-mapper';
 
 /**
  * Hebrew consonant name to value map
@@ -336,6 +336,126 @@ export const allDiacritics = diacritics.concat(cantillationDiacritics);
 export const dotting = Object.freeze(allVowels.concat(allDiacritics));
 
 /**
+ * Hebrew to ordinal ASCII value. Used for sorting:
+ * a b c d e f g h i j k l m n o p q r s t u v
+ * w x y z { | }
+ * @constant
+ * @type { Object.<string, string> }
+*/
+
+export const letterAsciiMap = Object.freeze(
+  Object.create(null, {
+    [l.alef]: { value: 'a', enumerable: true },
+    [l.bet]: { value: 'b', enumerable: true },
+    [l.gimel]: { value: 'c', enumerable: true },
+    [l.dalet]: { value: 'd', enumerable: true },
+
+    [l.he]: { value: 'e', enumerable: true },
+    [l.vav]: { value: 'f', enumerable: true },
+    [l.zayin]: { value: 'g', enumerable: true },
+
+    [l.het]: { value: 'h', enumerable: true },
+    [l.tet]: { value: 'i', enumerable: true },
+    [l.yod]: { value: 'j', enumerable: true },
+
+    [l.kaf]: { value: 'k', enumerable: true },
+    [l.finalKaf]: { value: 'k', enumerable: true },
+    [l.lamed]: { value: 'l', enumerable: true },
+    [l.mem]: { value: 'm', enumerable: true },
+    [l.finalMem]: { value: 'm', enumerable: true },
+    [l.nun]: { value: 'n', enumerable: true },
+    [l.finalNun]: { value: 'n', enumerable: true },
+
+    [l.samekh]: { value: 'o', enumerable: true },
+    [l.ayin]: { value: 'p', enumerable: true },
+    [l.pe]: { value: 'q', enumerable: true },
+    [l.finalPe]: { value: 'q', enumerable: true },
+    [l.tsadi]: { value: 'r', enumerable: true },
+    [l.finalTsadi]: { value: 'r', enumerable: true },
+
+    [l.qof]: { value: 's', enumerable: true },
+    [l.resh]: { value: 't', enumerable: true },
+    [l.shin]: { value: 'u', enumerable: true },
+    [l.tav]: { value: 'v', enumerable: true },
+
+    װ: { value: 'ff', enumerable: true }, // װ HEBREW LIGATURE YIDDISH DOUBLE VAV = tsvey vovn
+    ױ: { value: 'fj', enumerable: true }, // ױ HEBREW LIGATURE YIDDISH VAV YOD
+    ײ: { value: 'jj', enumerable: true }, // ײ HEBREW LIGATURE YIDDISH DOUBLE YOD = tsvey yudn
+
+    [v.pthaha]: { value: 'w', enumerable: true }, // a
+    [v.zqapha]: { value: 'x', enumerable: true }, // o
+    [v.rbasa]: { value: 'y', enumerable: true }, // e
+    [v.zlama]: { value: 'z', enumerable: true }, // E
+    [v.hbasa]: { value: '{', enumerable: true }, // i
+    [v.esasa]: { value: '|', enumerable: true }, // u
+    [v.rwaha]: { value: '}', enumerable: true }, // O
+
+    [v.patah]: { value: 'w', enumerable: true }, // a
+    [v.hatafPatah]: { value: 'w', enumerable: true }, // a ֲ HEBREW POINT HATAF PATAH
+    [v.qamats]: { value: 'x', enumerable: true }, // o
+    [v.hatafQamats]: { value: 'x', enumerable: true }, // o ֳ HEBREW POINT HATAF QAMATS
+    [v.qamatsQatan]: { value: 'x', enumerable: true }, // o ׇ HEBREW POINT QAMATS QATAN → \u05B8 hebrew point qamats
+    [v.tsere]: { value: 'y', enumerable: true }, // e
+    [v.segol]: { value: 'z', enumerable: true }, // E
+    [v.hatafSegol]: { value: 'z', enumerable: true }, // E ֱ HEBREW POINT HATAF SEGOL
+    [v.hiriq]: { value: '{', enumerable: true }, // i
+    [v.shuruq]: { value: '|', enumerable: true }, // u
+    [v.qubuts]: { value: '|', enumerable: true }, // u  ֻ HEBREW POINT QUBUTS
+    [v.holamHaser]: { value: '}', enumerable: true }, // O
+    [v.holam]: { value: '}', enumerable: true }, // O  ֹ HEBREW POINT HOLAM
+
+    [v.sheva]: { value: '', enumerable: true }, //  ְ HEBREW POINT SHEVA
+
+    [v.holam]: { value: 'w', enumerable: true }, //  ֹ HEBREW POINT HOLAM
+    [v.qubuts]: { value: 'w', enumerable: true }, //  ֻ HEBREW POINT QUBUTS
+    [v.sheva]: { value: 'w', enumerable: true }, //  ְ HEBREW POINT SHEVA
+    [v.hatafSegol]: { value: 'w', enumerable: true }, //  ֱ HEBREW POINT HATAF SEGOL
+    [v.hatafPatah]: { value: 'w', enumerable: true }, //  ֲ HEBREW POINT HATAF PATAH
+    [v.hatafQamats]: { value: 'w', enumerable: true }, //  ֳ HEBREW POINT HATAF QAMATS
+    [v.qamatsQatan]: { value: 'w', enumerable: true }, //  ׇ HEBREW POINT QAMATS QATAN → \u05B8 hebrew point qamats
+
+    [d.meteg]: { value: '', enumerable: true }, //  ֽ HEBREW POINT METEG  = siluq  • may be used as a Hebrew accent sof pasuq
+    [d.rafe]: { value: '', enumerable: true }, //  ֿ HEBREW POINT RAFE  → \uFB1E ﬞ  hebrew point judeo-spanish varika
+    [d.shin]: { value: '', enumerable: true }, //  ׁHEBREW POINT SHIN DOT
+    [d.sin]: { value: '', enumerable: true }, //  ׂHEBREW POINT SIN DOT
+    [d.upper]: { value: '', enumerable: true }, //  ׄ HEBREW MARK UPPER DOT
+    [d.lower]: { value: '', enumerable: true }, //  ׅ HEBREW MARK LOWER DOT • punctum extraordinarium (Psalms 27:13) → \u05B4 hebrew point hiriq
+
+    ['\u0591']: { value: '', enumerable: true }, //  ֑ HEBREW ACCENT ETNAHTA = atnah
+    ['\u0592']: { value: '', enumerable: true }, //  ֒ HEBREW ACCENT SEGOL = segolta
+    ['\u0593']: { value: '', enumerable: true }, //  ֓ HEBREW ACCENT SHALSHELET
+    ['\u0594']: { value: '', enumerable: true }, //  ֔ HEBREW ACCENT ZAQEF QATAN
+    ['\u0595']: { value: '', enumerable: true }, //  ֕ HEBREW ACCENT ZAQEF GADOL
+    ['\u0596']: { value: '', enumerable: true }, //  ֖ HEBREW ACCENT TIPEHA = tarha, me'ayla ~ mayla
+    ['\u0597']: { value: '', enumerable: true }, //  ֗ HEBREW ACCENT REVIA
+    ['\u0598']: { value: '', enumerable: true }, //  ֘ HEBREW ACCENT ZARQA = tsinorit, zinorit; tsinor, zinor • This character is to be used when Zarqa or Tsinor are placed above, and also for Tsinorit. → \u05AE hebrew accent zinor
+    ['\u0599']: { value: '', enumerable: true }, //  ֙ HEBREW ACCENT PASHTA
+    ['\u059A']: { value: '', enumerable: true }, // $֚ HEBREW ACCENT YETIV
+    ['\u059B']: { value: '', enumerable: true }, //  ֛ HEBREW ACCENT TEVIR
+    ['\u059C']: { value: '', enumerable: true }, //  ֜ HEBREW ACCENT GERESH = teres
+    ['\u059D']: { value: '', enumerable: true }, //  ֝ HEBREW ACCENT GERESH MUQDAM
+    ['\u059E']: { value: '', enumerable: true }, //  ֞ HEBREW ACCENT GERSHAYIM
+    ['\u059F']: { value: '', enumerable: true }, //  ֟ HEBREW ACCENT QARNEY PARA = pazer gadol
+    ['\u05A0']: { value: '', enumerable: true }, //  ֠ HEBREW ACCENT TELISHA GEDOLA
+    ['\u05A1']: { value: '', enumerable: true }, //  ֡ HEBREW ACCENT PAZER = pazer qatan
+    ['\u05A2']: { value: '', enumerable: true }, //  ֢ HEBREW ACCENT ATNAH HAFUKH → 05AA $ hebrew accent yerah ben yomo
+    ['\u05A3']: { value: '', enumerable: true }, //  ֣ HEBREW ACCENT MUNAH
+    ['\u05A4']: { value: '', enumerable: true }, //  ֤ HEBREW ACCENT MAHAPAKH
+    ['\u05A5']: { value: '', enumerable: true }, //  ֥ HEBREW ACCENT MERKHA = yored
+    ['\u05A6']: { value: '', enumerable: true }, //  ֦ HEBREW ACCENT MERKHA KEFULA
+    ['\u05A7']: { value: '', enumerable: true }, //  ֧ HEBREW ACCENT DARGA
+    ['\u05A8']: { value: '', enumerable: true }, //  ֨ HEBREW ACCENT QADMA = azla
+    ['\u05A9']: { value: '', enumerable: true }, //  ֩ HEBREW ACCENT TELISHA QETANA
+    ['\u05AA']: { value: '', enumerable: true }, //  ֪ HEBREW ACCENT YERAH BEN YOMO = galgal → 05A2 $ hebrew accent atnah hafukh
+    ['\u05AB']: { value: '', enumerable: true }, //  ֫ HEBREW ACCENT OLE
+    ['\u05AC']: { value: '', enumerable: true }, //  ֬ HEBREW ACCENT ILUY
+    ['\u05AD']: { value: '', enumerable: true }, //  ֭ HEBREW ACCENT DEHI
+    ['\u05AE']: { value: '', enumerable: true }, //  ֮ HEBREW ACCENT ZINOR = tsinor; zarqa • This character is to be used when Zarqa or Tsinor are placed above left. → 0598 $ hebrew accent zarqa
+    ['\u05AF']: { value: '', enumerable: true } //  ֯ HEBREW MARK MASORA CIRCLE
+  })
+);
+
+/**
  * Is character c a Hebrew consonant? All consonants and diagraphs are included.
  * @param { string } c input character
  * @returns { boolean } true if c is Hebrew consonant
@@ -445,3 +565,12 @@ export const endify = word => {
   }
   return word;
 };
+
+/**
+ * Comparator function to be used for sorting words
+ * @static
+ * @param { string } word1 first word to compare
+ * @param { string } word2 second word to compare
+ * @returns { number } -1, 0, 1 depending on word sorting
+ */
+export const sort = getSort(letterAsciiMap, removeDotting);
