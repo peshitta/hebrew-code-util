@@ -340,7 +340,7 @@ Return true if input word has vowels or diacritics
 
 | Param | Type | Description |
 | --- | --- | --- |
-| word | <code>string</code> | input CAL code word |
+| word | <code>string</code> | input Hebrew unicode word |
 
 <a name="module_hebrewCodeUtil.isBegadkepat"></a>
 
