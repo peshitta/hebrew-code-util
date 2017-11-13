@@ -217,7 +217,7 @@ Vowels and diacritics: used for consonantal only mapping
 <a name="module_hebrewCodeUtil.letterAsciiMap"></a>
 
 ### hebrewCodeUtil.letterAsciiMap : <code>Object.&lt;string, string&gt;</code>
-CAL to ordinal ASCII value. Used for sorting:
+Hebrew to ordinal ASCII value. Used for sorting:
 a b c d e f g h i j k l m n o p q r s t u v
 w x y z { | }
 
