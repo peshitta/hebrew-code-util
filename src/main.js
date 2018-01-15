@@ -573,4 +573,4 @@ export const endify = word => {
  * @param { string } word2 second word to compare
  * @returns { number } -1, 0, 1 depending on word sorting
  */
-export const sort = getSort(letterAsciiMap, removeDotting);
+export const sort = getSort(letterAsciiMap, isConsonant);
